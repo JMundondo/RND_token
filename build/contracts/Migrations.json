@@ -53,7 +53,7 @@
   "sourceMap": "66:352:10:-;;;113:10;90:33;;;;;;;;;;;;;;;;;;;;66:352;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:10;;;;;;;",
   "deployedSourceMap": "66:352:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:352:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;127:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;90:33;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;313:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;313:103:10;;;;;;;;;;;;;;;;;:::i;:::-;;127:36;;;;:::o;90:33::-;;;;;;;;;;;;;:::o;313:103::-;225:5;;;;;;;;;;;211:19;;:10;:19;;;196:101;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;402:9;375:24;:36;;;;313:103;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Migrations {\n  address public owner = msg.sender;\n  uint public last_completed_migration;\n\n  modifier restricted() {\n    require(\n      msg.sender == owner,\n      \"This function is restricted to the contract's owner\"\n    );\n    _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "C:\\Users\\Jephias T Mundondo\\OneDrive\\Desktop\\RND_token\\contracts\\Migrations.sol",
+  "sourcePath": "/Users/tcmundondo/Desktop/RND_token/RND_token/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -911,22 +911,9 @@
     "name": "solc",
     "version": "0.5.17+commit.d19bba13.Emscripten.clang"
   },
-  "networks": {
-    "1666793736470": {
-      "events": {},
-      "links": {},
-      "address": "0x3bE9d7e3a1400c7821A8dDFD92d1c78A4ef657a8",
-      "transactionHash": "0x6d1c426f313f14972d1add9e1bc0f2f1118e587099d59f4935186ece210ec458"
-    },
-    "1666893066988": {
-      "events": {},
-      "links": {},
-      "address": "0x5d74C9C5dC67b14ce2F35752b807A9D63beA6e9B",
-      "transactionHash": "0x0b1141e6ea913ea9181f8cea8f40f20a11b720c054a2e8465abbc33d7aa7eeee"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.10",
-  "updatedAt": "2022-10-31T04:34:26.803Z",
+  "updatedAt": "2022-10-31T10:58:57.335Z",
   "devdoc": {
     "methods": {}
   },
