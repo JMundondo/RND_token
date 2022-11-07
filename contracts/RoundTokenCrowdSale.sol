@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/ownership/Ownable.sol";
 import "@openzeppelin/contracts/crowdsale/validation/CappedCrowdsale.sol";
 import "@openzeppelin/contracts/crowdsale/validation/TimedCrowdsale.sol";
 
-contract RoundTokenCrowedSale is Crowdsale ,Ownable ,CappedCrowdsale, TimedCrowdsale {
+contract RoundTokenCrowdSale is Crowdsale ,Ownable ,CappedCrowdsale, TimedCrowdsale {
 
  
 
