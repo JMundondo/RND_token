@@ -4,9 +4,9 @@ pragma solidity ^0.5.0;
 import "@openzeppelin/contracts/crowdsale/Crowdsale.sol";
 import "@openzeppelin/contracts/ownership/Ownable.sol";
 import "@openzeppelin/contracts/crowdsale/validation/CappedCrowdsale.sol";
-import "@openzeppelin/contracts/crowdsale/validation/TimedCrowdsale.sol";
 
-contract RoundTokenCrowdSale is Crowdsale ,Ownable ,CappedCrowdsale, TimedCrowdsale {
+
+contract RoundTokenCrowdSale is Crowdsale ,Ownable  {
 
  
 
@@ -21,13 +21,12 @@ contract RoundTokenCrowdSale is Crowdsale ,Ownable ,CappedCrowdsale, TimedCrowds
      constructor(
         uint256 rate,            // rate, in TKNbits
         address payable wallet,  // wallet to send Ether
-        IERC20 token,            // the token
-        uint256 cap,             // total cap, in wei
-        uint256 openingTime,     // opening time in unix epoch seconds
-        uint256 closingTime      // closing time in unix epoch seconds
+        IERC20 token           // the token
+                           // closing time in unix epoch seconds
     )
-        CappedCrowdsale(cap)
-        TimedCrowdsale(openingTime, closingTime)
+       
+     
+     
         Crowdsale(rate, wallet, token)
         public
     {
