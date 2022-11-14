@@ -1,5 +1,5 @@
 const RoundToken = artifacts.require("./RoundToken.sol");
-const RoundTokenCrowdsale = artifacts.require("./RoundTokenCrowdsale.sol");
+const RoundTokenCrowdSale = artifacts.require("./RoundTokenCrowdSale.sol");
 
 const duration = {
   seconds: function (val) { return val; },
@@ -53,25 +53,28 @@ module.exports = async function(deployer, accounts) {
 module.exports =  async function (deployer ,accounts) {
   await deployer.deploy(RoundToken);
   const deployedToken = await RoundToken.deployed();
-  const latestTime = (new Date).getTime();
+   
+  const msseconds = (new Date).getTime();
+  // divided to get the just seconds
+  //const latestTime = Math.floor( msseconds / 1000);
 
-const _rate           = 500;
-const _wallet         = '0x98428f27787200b8bC20E62A4a5670f97D177d03'; // TODO: Replace me
+
+const _rate           = 7904; // this will set our token at 0.20USD each
+const _wallet         = '0x9f899bD90d2fCE5B5da0ef4B2CD61bE2138570F2'; // TODO: Replace me
 const _token          = deployedToken.address;
 //const _openingTime    = latestTime + duration.minutes(1);
-const _openingTime    = latestTime ;
-const _closingTime    = _openingTime + duration.weeks(1);
-const _cap            = 1190401570;
+//const _openingTime    = msseconds ;
+//const _closingTime    = _openingTime + duration.weeks(1);
+
 
 await deployer.deploy(
-  RoundTokenCrowdsale,
+  RoundTokenCrowdSale,
   _rate,
   _wallet,
-  _token,
-  _cap,
-  _openingTime,
-  _closingTime,
+  _token
+
  
 );
+ 
 };
 
